@@ -2,6 +2,8 @@ import dayjs from 'dayjs';
 import updateLocale from 'dayjs/plugin/updateLocale';
 import 'dayjs/locale/zh-cn';
 import 'dayjs/plugin/localeData';
+// 注入 2027 年法定节假日数据（lunar-typescript 内置数据只到 2026 年）
+import './holidayOverrides.ts';
 
 /** 全局使用中文区域，与界面文案一致 */
 dayjs.locale('zh-cn');
